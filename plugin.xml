@@ -21,8 +21,8 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:rim="http://www.blackberry.com/ns/widgets"
-           id="org.apache.cordova.media-capture"
-      version="0.3.7-dev">
+           id="cordova-plugin-media-capture"
+      version="1.0.2-dev">
     <name>Capture</name>
 
     <description>Cordova Media Capture Plugin</description>
@@ -31,7 +31,7 @@ xmlns:rim="http://www.blackberry.com/ns/widgets"
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320646</issue>
     
-    <dependency id="org.apache.cordova.file" version=">=1.0.1" />
+    <dependency id="cordova-plugin-file" version=">=2.0.0" />
 
     <js-module src="www/CaptureAudioOptions.js" name="CaptureAudioOptions">
         <clobbers target="CaptureAudioOptions" />
@@ -214,18 +214,8 @@ xmlns:rim="http://www.blackberry.com/ns/widgets"
 
     <!-- windows -->
     <platform name="windows">
-        
-        <config-file target="package.phone.appxmanifest" parent="/Package/Capabilities">
-            <DeviceCapability Name="microphone" />
-            <DeviceCapability Name="webcam" />
-        </config-file>
-        
-        <config-file target="package.windows.appxmanifest" parent="/Package/Capabilities">
-            <DeviceCapability Name="microphone" />
-            <DeviceCapability Name="webcam" />
-        </config-file>
-        
-        <config-file target="package.windows80.appxmanifest" parent="/Package/Capabilities">
+
+        <config-file target="package.appxmanifest" parent="/Package/Capabilities">
             <DeviceCapability Name="microphone" />
             <DeviceCapability Name="webcam" />
         </config-file>
@@ -236,6 +226,14 @@ xmlns:rim="http://www.blackberry.com/ns/widgets"
 
         <js-module src="src/windows/CaptureProxy.js" name="CaptureProxy">
             <merges target="" />
+        </js-module>
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <!-- this overrides navigator.device.capture namespace with browser-specific implementation -->
+        <js-module src="src/browser/CaptureProxy.js" name="CaptureProxy">
+            <runs />
         </js-module>
     </platform>
 

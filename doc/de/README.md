@@ -1,23 +1,25 @@
-<!---
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
 -->
 
 # cordova-plugin-media-capture
+
+[![Build Status](https://travis-ci.org/apache/cordova-plugin-media-capture.svg)](https://travis-ci.org/apache/cordova-plugin-media-capture)
 
 Dieses Plugin ermöglicht den Zugriff auf des Geräts Audio-, Bild- und video-Capture-Funktionen.
 
@@ -40,39 +42,41 @@ Obwohl im globalen Gültigkeitsbereich, steht es nicht bis nach dem `deviceready
 
 ## Unterstützte Plattformen
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 und 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * Browser
+  * iOS
+  * Windows Phone 7 und 8
+  * Windows 8
+  * Windows
 
 ## Objekte
 
-*   Erfassen
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
-*   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+  * Erfassen
+  * CaptureAudioOptions
+  * CaptureImageOptions
+  * CaptureVideoOptions
+  * CaptureCallback
+  * CaptureErrorCB
+  * ConfigurationData
+  * MediaFile
+  * MediaFileData
 
 ## Methoden
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+  * capture.captureAudio
+  * capture.captureImage
+  * capture.captureVideo
+  * MediaFile.getFormatData
 
 ## Eigenschaften
 
-*   **SupportedAudioModes**: die Audio-Aufnahme vom Gerät unterstützten Formate. (ConfigurationData[])
+  * **SupportedAudioModes**: die Audio-Aufnahme vom Gerät unterstützten Formate. (ConfigurationData[])
 
-*   **SupportedImageModes**: die Aufnahme Bildgrößen und Formaten, die von dem Gerät unterstützt. (ConfigurationData[])
+  * **SupportedImageModes**: die Aufnahme Bildgrößen und Formaten, die von dem Gerät unterstützt. (ConfigurationData[])
 
-*   **SupportedVideoModes**: die Aufnahme Bildschirmauflösungen und Formate, die vom Gerät unterstützt. (ConfigurationData[])
+  * **SupportedVideoModes**: die Aufnahme Bildschirmauflösungen und Formate, die vom Gerät unterstützt. (ConfigurationData[])
 
 ## capture.captureAudio
 
@@ -93,12 +97,13 @@ Wenn der Capture-Vorgang abgeschlossen ist, führt die `CaptureCallback` mit ein
 
 ### Unterstützte Plattformen
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 und 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 und 8
+  * Windows 8
+  * Windows
 
 ### Beispiel
 
@@ -122,11 +127,11 @@ Wenn der Capture-Vorgang abgeschlossen ist, führt die `CaptureCallback` mit ein
 
 ### iOS Macken
 
-*   iOS muss keine Standard-audio-Recording-Anwendung, so dass eine einfache Benutzeroberfläche bereitgestellt wird.
+  * iOS muss keine Standard-audio-Recording-Anwendung, so dass eine einfache Benutzeroberfläche bereitgestellt wird.
 
 ### Windows Phone 7 und 8 Eigenarten
 
-*   Windows Phone 7 muss keine Standard-audio-Recording-Anwendung, so dass eine einfache Benutzeroberfläche bereitgestellt wird.
+  * Windows Phone 7 muss keine Standard-audio-Recording-Anwendung, so dass eine einfache Benutzeroberfläche bereitgestellt wird.
 
 ## CaptureAudioOptions
 
@@ -134,9 +139,9 @@ Wenn der Capture-Vorgang abgeschlossen ist, führt die `CaptureCallback` mit ein
 
 ### Eigenschaften
 
-*   **Limit**: die maximale Anzahl von audio-Clips kann Benutzer des Geräts in einem einzigen Capture-Vorgang aufzeichnen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
+  * **Limit**: die maximale Anzahl von audio-Clips kann Benutzer des Geräts in einem einzigen Capture-Vorgang aufzeichnen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
 
-*   **Dauer**: die maximale Dauer eines audio-sound-Clips, in Sekunden.
+  * **Dauer**: die maximale Dauer eines audio-sound-Clips, in Sekunden.
 
 ### Beispiel
 
@@ -148,20 +153,20 @@ Wenn der Capture-Vorgang abgeschlossen ist, führt die `CaptureCallback` mit ein
 
 ### Amazon Fire OS Macken
 
-*   Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
+  * Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
 
 ### Android Eigenarten
 
-*   Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
+  * Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
 
 ### BlackBerry 10 Macken
 
-*   Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
-*   Die `limit` Parameter wird nicht unterstützt, kann also nur eine Aufnahme für jeden Aufruf erstellt werden.
+  * Die `duration` Parameter wird nicht unterstützt. Aufnahme Längen kann nicht programmgesteuert begrenzt.
+  * Die `limit` Parameter wird nicht unterstützt, kann also nur eine Aufnahme für jeden Aufruf erstellt werden.
 
 ### iOS Macken
 
-*   Die `limit` Parameter wird nicht unterstützt, kann also nur eine Aufnahme für jeden Aufruf erstellt werden.
+  * Die `limit` Parameter wird nicht unterstützt, kann also nur eine Aufnahme für jeden Aufruf erstellt werden.
 
 ## capture.captureImage
 
@@ -182,16 +187,24 @@ Wenn der Capture-Vorgang abgeschlossen ist, ruft es den `CaptureCB`-Rückruf mit
 
 ### Unterstützte Plattformen
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 und 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * Browser
+  * iOS
+  * Windows Phone 7 und 8
+  * Windows 8
+  * Windows
 
 ### Windows Phone 7 Macken
 
 Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen ist, funktioniert nicht, und die Fehler-Callback führt.
+
+### Browser-Eigenheiten
+
+Arbeitet in Chrome, Firefox und Opera nur (da IE und Safari nicht unterstützt navigator.getUserMedia-API)
+
+Anzeigen von Bildern mit erfasst nur Datei-URL in Chrome/Opera verfügbar. Firefox speichert die aufgenommenen Bilder in IndexedDB Speicher (siehe Datei-Plugin-Dokumentation), und aus diesem Grund ist die einzige Möglichkeit, aufgenommene Bild zeigen es und zeigen mit ihrer DataURL lesen.
 
 ### Beispiel
 
@@ -219,7 +232,7 @@ Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen 
 
 ### Eigenschaften
 
-*   **Limit**: die maximale Anzahl der Bilder, die der Benutzer zu, die in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
+  * **Limit**: die maximale Anzahl der Bilder, die der Benutzer zu, die in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
 
 ### Beispiel
 
@@ -231,7 +244,7 @@ Die native Kameraanwendung aufrufen, während Ihr Gerät via Zune angeschlossen 
 
 ### iOS Macken
 
-*   Der **Limit** -Parameter wird nicht unterstützt, und nur ein Bild pro Aufruf stammt.
+  * Der **Limit** -Parameter wird nicht unterstützt, und nur ein Bild pro Aufruf stammt.
 
 ## capture.captureVideo
 
@@ -252,12 +265,13 @@ Der Capture-Vorgang abgeschlossen ist, führt er der `CaptureCB`-Rückruf mit ei
 
 ### Unterstützte Plattformen
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 und 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 und 8
+  * Windows 8
+  * Windows
 
 ### Beispiel
 
@@ -281,7 +295,7 @@ Der Capture-Vorgang abgeschlossen ist, führt er der `CaptureCB`-Rückruf mit ei
 
 ### BlackBerry 10 Macken
 
-*   Cordova für BlackBerry 10 versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `CaptureError.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem Gerät installiert ist.
+  * Cordova für BlackBerry 10 versucht, **Video-Recorder** Starten der Anwendung, bereitgestellt durch RIM, Videoaufnahmen zu erfassen. Die app erhält eine `CaptureError.CAPTURE_NOT_SUPPORTED` Fehlercode, wenn die Anwendung nicht auf dem Gerät installiert ist.
 
 ## CaptureVideoOptions
 
@@ -289,9 +303,9 @@ Der Capture-Vorgang abgeschlossen ist, führt er der `CaptureCB`-Rückruf mit ei
 
 ### Eigenschaften
 
-*   **Limit**: die maximale Anzahl von video-Clips des Geräts Benutzer kann in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
+  * **Limit**: die maximale Anzahl von video-Clips des Geräts Benutzer kann in einem einzigen Capture-Vorgang erfassen. Der Wert muss größer als oder gleich 1 (Standardwert 1).
 
-*   **Dauer**: die maximale Dauer eines Videoclips in Sekunden.
+  * **Dauer**: die maximale Dauer eines Videoclips in Sekunden.
 
 ### Beispiel
 
@@ -303,11 +317,11 @@ Der Capture-Vorgang abgeschlossen ist, führt er der `CaptureCB`-Rückruf mit ei
 
 ### BlackBerry 10 Macken
 
-*   Der **Duration** -Parameter wird nicht unterstützt, so dass die Länge der Aufnahmen programmgesteuert nur beschränkt sein kann.
+  * Der **Duration** -Parameter wird nicht unterstützt, so dass die Länge der Aufnahmen programmgesteuert nur beschränkt sein kann.
 
 ### iOS Macken
 
-*   Der **Limit** -Parameter wird nicht unterstützt. Pro Aufruf wird nur ein Video aufgezeichnet.
+  * Der **Limit** -Parameter wird nicht unterstützt. Pro Aufruf wird nur ein Video aufgezeichnet.
 
 ## CaptureCB
 
@@ -340,19 +354,19 @@ Jedes `MediaFile`-Objekt beschreibt eine aufgenommenen Medien-Datei.
 
 ### Eigenschaften
 
-*   **Code**: einer der vordefinierten Fehlercodes aufgeführt.
+  * **Code**: einer der vordefinierten Fehlercodes aufgeführt.
 
 ### Konstanten
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: Die Kamera oder das Mikrofon konnte Bild oder Ton zu erfassen.
+  * `CaptureError.CAPTURE_INTERNAL_ERR`: Die Kamera oder das Mikrofon konnte Bild oder Ton zu erfassen.
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`: Eine weitere Aufnahme-Anforderung verbüßt die Kamera oder Audio-Capture-Anwendung.
+  * `CaptureError.CAPTURE_APPLICATION_BUSY`: Eine weitere Aufnahme-Anforderung verbüßt die Kamera oder Audio-Capture-Anwendung.
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`: Ungültige Verwendung der API (z. B. den Wert des `limit` ist kleiner als 1).
+  * `CaptureError.CAPTURE_INVALID_ARGUMENT`: Ungültige Verwendung der API (z. B. den Wert des `limit` ist kleiner als 1).
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: Der Benutzer wird die Kamera oder Audio-Capture-Anwendung vor Aufnahme alles beendet.
+  * `CaptureError.CAPTURE_NO_MEDIA_FILES`: Der Benutzer wird die Kamera oder Audio-Capture-Anwendung vor Aufnahme alles beendet.
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`: Der angeforderte Capture-Vorgang wird nicht unterstützt.
+  * `CaptureError.CAPTURE_NOT_SUPPORTED`: Der angeforderte Capture-Vorgang wird nicht unterstützt.
 
 ## CaptureErrorCB
 
@@ -383,23 +397,21 @@ Diese Funktion führt mit einem `CaptureError`-Objekt enthält einen entsprechen
 
 Beschreibt Medien-Aufnahmemodi, die vom Gerät unterstützt. Die Konfigurationsdaten enthält den MIME-Typ und Capture Dimensionen für die Aufnahme von Video- oder Bilddateien.
 
-Die MIME-Typen sollten [RFC2046][1] einhalten. Beispiele:
+Die MIME-Typen sollten [RFC2046](http://www.ietf.org/rfc/rfc2046.txt) einhalten. Beispiele:
 
- [1]: http://www.ietf.org/rfc/rfc2046.txt
-
-*   `video/3gpp`
-*   `video/quicktime`
-*   `image/jpeg`
-*   `audio/amr`
-*   `audio/wav`
+  * `video/3gpp`
+  * `video/quicktime`
+  * `image/jpeg`
+  * `audio/amr`
+  * `audio/wav`
 
 ### Eigenschaften
 
-*   **Typ**: die ASCII-codierte Zeichenfolge aus Kleinbuchstaben, den Medientyp darstellt. (DOM-String und enthält)
+  * **Typ**: die ASCII-codierte Zeichenfolge aus Kleinbuchstaben, den Medientyp darstellt. (DOM-String und enthält)
 
-*   **Höhe**: die Höhe des Bildes oder Videos in Pixel. Der Wert ist NULL für sound-Clips. (Anzahl)
+  * **Höhe**: die Höhe des Bildes oder Videos in Pixel. Der Wert ist NULL für sound-Clips. (Anzahl)
 
-*   **Breite**: die Breite des Bildes oder Videos in Pixel. Der Wert ist NULL für sound-Clips. (Anzahl)
+  * **Breite**: die Breite des Bildes oder Videos in Pixel. Der Wert ist NULL für sound-Clips. (Anzahl)
 
 ### Beispiel
 
@@ -435,12 +447,13 @@ Diese Funktion versucht asynchron, die Formatierungsinformationen für die Medie
 
 ### Unterstützte Plattformen
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 und 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 und 8
+  * Windows 8
+  * Windows
 
 ### Amazon Fire OS Macken
 
@@ -464,19 +477,19 @@ Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht a
 
 ### Eigenschaften
 
-*   **Name**: der Name der Datei, ohne Pfadinformationen. (DOM-String und enthält)
+  * **Name**: der Name der Datei, ohne Pfadinformationen. (DOM-String und enthält)
 
-*   **FullPath**: der vollständige Pfad der Datei, einschließlich des Namens. (DOM-String und enthält)
+  * **FullPath**: der vollständige Pfad der Datei, einschließlich des Namens. (DOM-String und enthält)
 
-*   **Typ**: Mime-Typ der Datei (DOM-String und enthält)
+  * **Typ**: Mime-Typ der Datei (DOM-String und enthält)
 
-*   **LastModifiedDate**: das Datum und die Uhrzeit wann die Datei zuletzt geändert wurde. (Datum)
+  * **LastModifiedDate**: das Datum und die Uhrzeit wann die Datei zuletzt geändert wurde. (Datum)
 
-*   **Größe**: die Größe der Datei in Byte. (Anzahl)
+  * **Größe**: die Größe der Datei in Byte. (Anzahl)
 
 ### Methoden
 
-*   **MediaFile.getFormatData**: Ruft die Formatierungsinformationen der Mediendatei.
+  * **MediaFile.getFormatData**: Ruft die Formatierungsinformationen der Mediendatei.
 
 ## MediaFileData
 
@@ -484,68 +497,68 @@ Die API zum Zugriff Medien Dateiformat-Information ist begrenzt, so dass nicht a
 
 ### Eigenschaften
 
-*   **Codecs**: das tatsächliche Format der Audio- und video-Inhalte. (DOM-String und enthält)
+  * **Codecs**: das tatsächliche Format der Audio- und video-Inhalte. (DOM-String und enthält)
 
-*   **Bitrate**: die durchschnittliche Bitrate des Inhalts. Der Wert ist NULL für Bilder. (Anzahl)
+  * **Bitrate**: die durchschnittliche Bitrate des Inhalts. Der Wert ist NULL für Bilder. (Anzahl)
 
-*   **Höhe**: die Höhe des Bildes oder Videos in Pixel. Der Wert ist NULL für audio-Clips. (Anzahl)
+  * **Höhe**: die Höhe des Bildes oder Videos in Pixel. Der Wert ist NULL für audio-Clips. (Anzahl)
 
-*   **Breite**: die Breite des Bildes oder Videos in Pixel. Der Wert ist NULL für audio-Clips. (Anzahl)
+  * **Breite**: die Breite des Bildes oder Videos in Pixel. Der Wert ist NULL für audio-Clips. (Anzahl)
 
-*   **Dauer**: die Länge des Video- oder Clips in Sekunden. Der Wert ist NULL für Bilder. (Anzahl)
+  * **Dauer**: die Länge des Video- oder Clips in Sekunden. Der Wert ist NULL für Bilder. (Anzahl)
 
 ### BlackBerry 10 Macken
 
 Keine API bietet Formatierungsinformationen für Mediendateien, so dass das `MediaFileData`-Objekt durch `MediaFile.getFormatData` Features die folgenden Standardwerte zurückgegeben:
 
-*   **Codecs**: nicht unterstützt, und gibt`null`.
+  * **Codecs**: nicht unterstützt, und gibt`null`.
 
-*   **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
+  * **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Höhe**: nicht unterstützt, und gibt den Wert NULL.
+  * **Höhe**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Breite**: nicht unterstützt, und gibt den Wert NULL.
+  * **Breite**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Dauer**: nicht unterstützt, und gibt den Wert NULL.
+  * **Dauer**: nicht unterstützt, und gibt den Wert NULL.
 
 ### Amazon Fire OS Macken
 
 Unterstützt die folgenden `MediaFileData` Eigenschaften:
 
-*   **Codecs**: nicht unterstützt, und gibt`null`.
+  * **Codecs**: nicht unterstützt, und gibt`null`.
 
-*   **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
+  * **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Höhe**: unterstützt: nur Bild und Video-Dateien.
+  * **Höhe**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Breite**: unterstützt: nur Bild und Video-Dateien.
+  * **Breite**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Dauer**: unterstützt: Audio- und video-Dateien nur
+  * **Dauer**: unterstützt: Audio- und video-Dateien nur
 
 ### Android Eigenarten
 
 Unterstützt die folgenden `MediaFileData` Eigenschaften:
 
-*   **Codecs**: nicht unterstützt, und gibt`null`.
+  * **Codecs**: nicht unterstützt, und gibt`null`.
 
-*   **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
+  * **Bitrate**: nicht unterstützt, und gibt den Wert NULL.
 
-*   **Höhe**: unterstützt: nur Bild und Video-Dateien.
+  * **Höhe**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Breite**: unterstützt: nur Bild und Video-Dateien.
+  * **Breite**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Dauer**: unterstützt: Audio- und video-Dateien nur.
+  * **Dauer**: unterstützt: Audio- und video-Dateien nur.
 
 ### iOS Macken
 
 Unterstützt die folgenden `MediaFileData` Eigenschaften:
 
-*   **Codecs**: nicht unterstützt, und gibt`null`.
+  * **Codecs**: nicht unterstützt, und gibt`null`.
 
-*   **Bitrate**: iOS4 Geräten für nur Audio unterstützt. Gibt 0 (null) für Bilder und Videos.
+  * **Bitrate**: iOS4 Geräten für nur Audio unterstützt. Gibt 0 (null) für Bilder und Videos.
 
-*   **Höhe**: unterstützt: nur Bild und Video-Dateien.
+  * **Höhe**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Breite**: unterstützt: nur Bild und Video-Dateien.
+  * **Breite**: unterstützt: nur Bild und Video-Dateien.
 
-*   **Dauer**: unterstützt: Audio- und video-Dateien nur.
+  * **Dauer**: unterstützt: Audio- und video-Dateien nur.

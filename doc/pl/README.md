@@ -1,23 +1,25 @@
-<!---
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
 -->
 
 # cordova-plugin-media-capture
+
+[![Build Status](https://travis-ci.org/apache/cordova-plugin-media-capture.svg)](https://travis-ci.org/apache/cordova-plugin-media-capture)
 
 Ten plugin umożliwia dostęp do urządzenia dźwięku, obrazu i możliwości przechwytywania wideo.
 
@@ -40,39 +42,41 @@ Chociaż w globalnym zasięgu, to nie dostępne dopiero po `deviceready` imprezi
 
 ## Obsługiwane platformy
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 i 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * Przeglądarka
+  * iOS
+  * Windows Phone 7 i 8
+  * Windows 8
+  * Windows
 
 ## Obiekty
 
-*   Capture
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
-*   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+  * Capture
+  * CaptureAudioOptions
+  * CaptureImageOptions
+  * CaptureVideoOptions
+  * CaptureCallback
+  * CaptureErrorCB
+  * ConfigurationData
+  * MediaFile
+  * MediaFileData
 
 ## Metody
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+  * capture.captureAudio
+  * capture.captureImage
+  * capture.captureVideo
+  * MediaFile.getFormatData
 
 ## Właściwości
 
-*   **supportedAudioModes**: nagranie formatów obsługiwanych przez urządzenie. (ConfigurationData[])
+  * **supportedAudioModes**: nagranie formatów obsługiwanych przez urządzenie. (ConfigurationData[])
 
-*   **supportedImageModes**: nagrywanie obrazu rozmiarów i formatów obsługiwanych przez urządzenie. (ConfigurationData[])
+  * **supportedImageModes**: nagrywanie obrazu rozmiarów i formatów obsługiwanych przez urządzenie. (ConfigurationData[])
 
-*   **supportedVideoModes**: rozdzielczości nagrywania i formatów obsługiwanych przez urządzenie. (ConfigurationData[])
+  * **supportedVideoModes**: rozdzielczości nagrywania i formatów obsługiwanych przez urządzenie. (ConfigurationData[])
 
 ## capture.captureAudio
 
@@ -93,12 +97,13 @@ Po zakończeniu operacji przechwytywania, `CaptureCallback` wykonuje się z tabl
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 i 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 i 8
+  * Windows 8
+  * Windows
 
 ### Przykład
 
@@ -122,11 +127,11 @@ Po zakończeniu operacji przechwytywania, `CaptureCallback` wykonuje się z tabl
 
 ### Dziwactwa iOS
 
-*   iOS nie ma domyślnej aplikacji do nagrywania dźwięku, więc podano pewien prosty użytkownik złącze standardowe.
+  * iOS nie ma domyślnej aplikacji do nagrywania dźwięku, więc podano pewien prosty użytkownik złącze standardowe.
 
 ### Windows Phone 7 i 8 dziwactwa
 
-*   Windows Phone 7 nie ma domyślnej aplikacji do nagrywania dźwięku, więc pewien prosty użytkownik złącze standardowe jest dostarczone.
+  * Windows Phone 7 nie ma domyślnej aplikacji do nagrywania dźwięku, więc pewien prosty użytkownik złącze standardowe jest dostarczone.
 
 ## CaptureAudioOptions
 
@@ -134,9 +139,9 @@ Po zakończeniu operacji przechwytywania, `CaptureCallback` wykonuje się z tabl
 
 ### Właściwości
 
-*   **Limit**: Maksymalna liczba klipów audio nagrywać w operacji przechwytywania pojedynczego użytkownika urządzenia. Wartość musi być większa lub równa 1 (domyślnie 1).
+  * **Limit**: Maksymalna liczba klipów audio nagrywać w operacji przechwytywania pojedynczego użytkownika urządzenia. Wartość musi być większa lub równa 1 (domyślnie 1).
 
-*   **czas trwania**: maksymalny czas trwania klipu audio dźwięku, w kilka sekund.
+  * **czas trwania**: maksymalny czas trwania klipu audio dźwięku, w kilka sekund.
 
 ### Przykład
 
@@ -148,20 +153,20 @@ Po zakończeniu operacji przechwytywania, `CaptureCallback` wykonuje się z tabl
 
 ### Amazon ogień OS dziwactwa
 
-*   `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
+  * `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
 
 ### Dziwactwa Androida
 
-*   `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
+  * `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
 
 ### Jeżyna 10 dziwactwa
 
-*   `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
-*   `limit`Parametr nie jest obsługiwana, więc tylko jednego nagrania mogą być tworzone dla każdego wywołania.
+  * `duration`Parametr nie jest obsługiwana. Zapis długości nie może być ograniczony programowo.
+  * `limit`Parametr nie jest obsługiwana, więc tylko jednego nagrania mogą być tworzone dla każdego wywołania.
 
 ### Dziwactwa iOS
 
-*   `limit`Parametr nie jest obsługiwana, więc tylko jednego nagrania mogą być tworzone dla każdego wywołania.
+  * `limit`Parametr nie jest obsługiwana, więc tylko jednego nagrania mogą być tworzone dla każdego wywołania.
 
 ## capture.captureImage
 
@@ -182,16 +187,24 @@ Po zakończeniu operacji przechwytywania, wywołuje `CaptureCB` wywołanie zwrot
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 i 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * Przeglądarka
+  * iOS
+  * Windows Phone 7 i 8
+  * Windows 8
+  * Windows
 
 ### Dziwactwa Windows Phone 7
 
 Wywoływanie aparat native aplikacji, podczas gdy urządzenie jest podłączone przez Zune nie dziala, i wykonuje błąd wywołania zwrotnego.
+
+### Quirks przeglądarki
+
+Działa w Chrome, Firefox i Opera, tylko (od IE i Safari nie obsługuje interfejsu API navigator.getUserMedia)
+
+Wyświetlanie obrazów przy użyciu zrobione tylko URL pliku dostępne w Chrome/Opera. Firefox przechowuje przechwyconych obrazów w składzie IndexedDB (zobacz plik wtyczki dokumentacji), i w związku z tym jedynym sposobem, aby pokazać przechwyconego obrazu jest czytać ją i Pokaż przy jego DataURL.
 
 ### Przykład
 
@@ -219,7 +232,7 @@ Wywoływanie aparat native aplikacji, podczas gdy urządzenie jest podłączone 
 
 ### Właściwości
 
-*   **limit**: Maksymalna liczba zdjęć, użytkownik puszka metalowa zawładnięcie w operacji przechwytywania pojedynczego. Wartość musi być większa lub równa 1 (domyślnie 1).
+  * **limit**: Maksymalna liczba zdjęć, użytkownik puszka metalowa zawładnięcie w operacji przechwytywania pojedynczego. Wartość musi być większa lub równa 1 (domyślnie 1).
 
 ### Przykład
 
@@ -231,7 +244,7 @@ Wywoływanie aparat native aplikacji, podczas gdy urządzenie jest podłączone 
 
 ### Dziwactwa iOS
 
-*   Parametr **limit** nie jest obsługiwane, i tylko jeden obraz jest podejmowana na wywołanie.
+  * Parametr **limit** nie jest obsługiwane, i tylko jeden obraz jest podejmowana na wywołanie.
 
 ## capture.captureVideo
 
@@ -252,12 +265,13 @@ Po zakończeniu operacji przechwytywania wywołania zwrotnego `CaptureCB` wykonu
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 i 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 i 8
+  * Windows 8
+  * Windows
 
 ### Przykład
 
@@ -281,7 +295,7 @@ Po zakończeniu operacji przechwytywania wywołania zwrotnego `CaptureCB` wykonu
 
 ### Jeżyna 10 dziwactwa
 
-*   Cordova dla BlackBerry 10 próbuje uruchomić wniosku **Rejestrator wideo** dostarczone przez RIM, przechwytywanie nagrań wideo. Aplikacja otrzymuje `CaptureError.CAPTURE_NOT_SUPPORTED` kod błędu, jeśli aplikacja nie jest zainstalowana na urządzeniu.
+  * Cordova dla BlackBerry 10 próbuje uruchomić wniosku **Rejestrator wideo** dostarczone przez RIM, przechwytywanie nagrań wideo. Aplikacja otrzymuje `CaptureError.CAPTURE_NOT_SUPPORTED` kod błędu, jeśli aplikacja nie jest zainstalowana na urządzeniu.
 
 ## CaptureVideoOptions
 
@@ -289,9 +303,9 @@ Po zakończeniu operacji przechwytywania wywołania zwrotnego `CaptureCB` wykonu
 
 ### Właściwości
 
-*   **Limit**: Maksymalna liczba klipów wideo urządzenia użytkownik puszka metalowa zawładnięcie w operacji przechwytywania pojedynczego. Wartość musi być większa lub równa 1 (domyślnie 1).
+  * **Limit**: Maksymalna liczba klipów wideo urządzenia użytkownik puszka metalowa zawładnięcie w operacji przechwytywania pojedynczego. Wartość musi być większa lub równa 1 (domyślnie 1).
 
-*   **czas trwania**: maksymalny czas trwania klipu wideo w kilka sekund.
+  * **czas trwania**: maksymalny czas trwania klipu wideo w kilka sekund.
 
 ### Przykład
 
@@ -303,11 +317,11 @@ Po zakończeniu operacji przechwytywania wywołania zwrotnego `CaptureCB` wykonu
 
 ### Jeżyna 10 dziwactwa
 
-*   **Czas trwania** parametr nie jest obsługiwana, więc długość nagrania nie może być ograniczony programowo.
+  * **Czas trwania** parametr nie jest obsługiwana, więc długość nagrania nie może być ograniczony programowo.
 
 ### Dziwactwa iOS
 
-*   Parametr **limit** nie jest obsługiwane. Tylko jeden film jest nagrany na wywołanie.
+  * Parametr **limit** nie jest obsługiwane. Tylko jeden film jest nagrany na wywołanie.
 
 ## CaptureCB
 
@@ -340,19 +354,19 @@ Każdy obiekt `MediaFile` opisuje plik multimedialny przechwycone.
 
 ### Właściwości
 
-*   **Kod**: jeden z kodów błędów wstępnie zdefiniowanych poniżej.
+  * **Kod**: jeden z kodów błędów wstępnie zdefiniowanych poniżej.
 
 ### Stałe
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: Kamery lub mikrofonu udało się przechwycić obraz lub dźwięk.
+  * `CaptureError.CAPTURE_INTERNAL_ERR`: Kamery lub mikrofonu udało się przechwycić obraz lub dźwięk.
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`: Aplikacji przechwytywania kamery lub audio jest aktualnie obsługujący wniosek innego przechwytywania.
+  * `CaptureError.CAPTURE_APPLICATION_BUSY`: Aplikacji przechwytywania kamery lub audio jest aktualnie obsługujący wniosek innego przechwytywania.
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`: Nieprawidłowe użycie interfejsu API (np. wartości `limit` jest mniej niż jeden).
+  * `CaptureError.CAPTURE_INVALID_ARGUMENT`: Nieprawidłowe użycie interfejsu API (np. wartości `limit` jest mniej niż jeden).
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: Użytkownik zamyka aparat fotograficzny lub audio aplikacji przechwytywania przed zrobieniem czegokolwiek.
+  * `CaptureError.CAPTURE_NO_MEDIA_FILES`: Użytkownik zamyka aparat fotograficzny lub audio aplikacji przechwytywania przed zrobieniem czegokolwiek.
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`: Przechwytywania Żądana operacja nie jest obsługiwana.
+  * `CaptureError.CAPTURE_NOT_SUPPORTED`: Przechwytywania Żądana operacja nie jest obsługiwana.
 
 ## CaptureErrorCB
 
@@ -383,23 +397,21 @@ Ta funkcja wykonuje się z obiektem `CaptureError`, zawierające odpowiedni komu
 
 W tym artykule opisano tryby przechwytywania mediów obsługiwane przez urządzenie. Dane konfiguracji zawiera typ MIME i przechwytywania wymiary do przechwytywania wideo lub obraz.
 
-Typy MIME powinno stosować się do [RFC2046][1]. Przykłady:
+Typy MIME powinno stosować się do [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). Przykłady:
 
- [1]: http://www.ietf.org/rfc/rfc2046.txt
-
-*   `video/3gpp`
-*   `video/quicktime`
-*   `image/jpeg`
-*   `audio/amr`
-*   `audio/wav`
+  * `video/3gpp`
+  * `video/quicktime`
+  * `image/jpeg`
+  * `audio/amr`
+  * `audio/wav`
 
 ### Właściwości
 
-*   **Typ**: The ASCII algorytmem małe ciąg reprezentujący typ nośnika. (DOMString)
+  * **Typ**: The ASCII algorytmem małe ciąg reprezentujący typ nośnika. (DOMString)
 
-*   **wysokość**: wysokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipy dźwiękowe. (Liczba)
+  * **wysokość**: wysokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipy dźwiękowe. (Liczba)
 
-*   **szerokość**: szerokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipy dźwiękowe. (Liczba)
+  * **szerokość**: szerokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipy dźwiękowe. (Liczba)
 
 ### Przykład
 
@@ -435,12 +447,13 @@ Ta funkcja asynchronicznie podejmie próby pobrania informacji o formacie plik m
 
 ### Obsługiwane platformy
 
-*   Amazon Fire OS
-*   Android
-*   BlackBerry 10
-*   iOS
-*   Windows Phone 7 i 8
-*   Windows 8
+  * Amazon Fire OS
+  * Android
+  * BlackBerry 10
+  * iOS
+  * Windows Phone 7 i 8
+  * Windows 8
+  * Windows
 
 ### Amazon ogień OS dziwactwa
 
@@ -464,19 +477,19 @@ Ten API wobec dostęp do mediów informacji o formacie pliku jest ograniczona, w
 
 ### Właściwości
 
-*   **Nazwa**: Nazwa pliku, bez informacji o ścieżce. (DOMString)
+  * **Nazwa**: Nazwa pliku, bez informacji o ścieżce. (DOMString)
 
-*   **fullPath**: pełną ścieżkę pliku, łącznie z nazwą. (DOMString)
+  * **fullPath**: pełną ścieżkę pliku, łącznie z nazwą. (DOMString)
 
-*   **Typ**: Typ mime pliku (DOMString)
+  * **Typ**: Typ mime pliku (DOMString)
 
-*   **Data ostatniej modyfikacji**: data i czas ostatniej modyfikacji pliku. (Data)
+  * **Data ostatniej modyfikacji**: data i czas ostatniej modyfikacji pliku. (Data)
 
-*   **rozmiar**: wielkość pliku w bajtach. (Liczba)
+  * **rozmiar**: wielkość pliku w bajtach. (Liczba)
 
 ### Metody
 
-*   **MediaFile.getFormatData**: pobiera informacje o formatach plików multimedialnych.
+  * **MediaFile.getFormatData**: pobiera informacje o formatach plików multimedialnych.
 
 ## MediaFileData
 
@@ -484,68 +497,68 @@ Ten API wobec dostęp do mediów informacji o formacie pliku jest ograniczona, w
 
 ### Właściwości
 
-*   **kodery-dekodery**: format rzeczywista zawartość audio i wideo. (DOMString)
+  * **kodery-dekodery**: format rzeczywista zawartość audio i wideo. (DOMString)
 
-*   **bitrate**: średnia szybkość transmisji bitów zawartości. Wartość wynosi zero dla obrazów. (Liczba)
+  * **bitrate**: średnia szybkość transmisji bitów zawartości. Wartość wynosi zero dla obrazów. (Liczba)
 
-*   **wysokość**: wysokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipów audio. (Liczba)
+  * **wysokość**: wysokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipów audio. (Liczba)
 
-*   **szerokość**: szerokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipów audio. (Liczba)
+  * **szerokość**: szerokość obrazu lub wideo w pikselach. Wartość wynosi zero dla klipów audio. (Liczba)
 
-*   **czas trwania**: długość dźwięku lub wideo klip w kilka sekund. Wartość wynosi zero dla obrazów. (Liczba)
+  * **czas trwania**: długość dźwięku lub wideo klip w kilka sekund. Wartość wynosi zero dla obrazów. (Liczba)
 
 ### Jeżyna 10 dziwactwa
 
 Nie API zapewnia informacje o formatach plików multimedialnych, więc obiekt `MediaFileData` zwracane przez funkcje `MediaFile.getFormatData` następujące wartości domyślne:
 
-*   **kodery-dekodery**: nie obsługiwane i zwraca`null`.
+  * **kodery-dekodery**: nie obsługiwane i zwraca`null`.
 
-*   **bitrate**: nie obsługiwane i zwraca zero.
+  * **bitrate**: nie obsługiwane i zwraca zero.
 
-*   **wysokość**: nie obsługiwane i zwraca zero.
+  * **wysokość**: nie obsługiwane i zwraca zero.
 
-*   **szerokość**: nie obsługiwane i zwraca zero.
+  * **szerokość**: nie obsługiwane i zwraca zero.
 
-*   **czas trwania**: nie obsługiwane i zwraca zero.
+  * **czas trwania**: nie obsługiwane i zwraca zero.
 
 ### Amazon ogień OS dziwactwa
 
 Obsługuje następujące `MediaFileData` Właściwości:
 
-*   **kodery-dekodery**: nie obsługiwane i zwraca`null`.
+  * **kodery-dekodery**: nie obsługiwane i zwraca`null`.
 
-*   **bitrate**: nie obsługiwane i zwraca zero.
+  * **bitrate**: nie obsługiwane i zwraca zero.
 
-*   **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **czas trwania**: obsługiwane: audio i wideo tylko pliki
+  * **czas trwania**: obsługiwane: audio i wideo tylko pliki
 
 ### Dziwactwa Androida
 
 Obsługuje następujące `MediaFileData` Właściwości:
 
-*   **kodery-dekodery**: nie obsługiwane i zwraca`null`.
+  * **kodery-dekodery**: nie obsługiwane i zwraca`null`.
 
-*   **bitrate**: nie obsługiwane i zwraca zero.
+  * **bitrate**: nie obsługiwane i zwraca zero.
 
-*   **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **czas trwania**: obsługiwane: audio i wideo tylko pliki.
+  * **czas trwania**: obsługiwane: audio i wideo tylko pliki.
 
 ### Dziwactwa iOS
 
 Obsługuje następujące `MediaFileData` Właściwości:
 
-*   **kodery-dekodery**: nie obsługiwane i zwraca`null`.
+  * **kodery-dekodery**: nie obsługiwane i zwraca`null`.
 
-*   **bitrate**: obsługiwane na iOS4 urządzeń audio tylko. Zwraca wartość zero dla zdjęć i filmów.
+  * **bitrate**: obsługiwane na iOS4 urządzeń audio tylko. Zwraca wartość zero dla zdjęć i filmów.
 
-*   **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **wysokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
+  * **szerokość**: obsługiwane: tylko pliki obrazów i wideo.
 
-*   **czas trwania**: obsługiwane: audio i wideo tylko pliki.
+  * **czas trwania**: obsługiwane: audio i wideo tylko pliki.

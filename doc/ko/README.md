@@ -1,23 +1,25 @@
-<!---
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
 -->
 
 # cordova-plugin-media-capture
+
+[![Build Status](https://travis-ci.org/apache/cordova-plugin-media-capture.svg)](https://travis-ci.org/apache/cordova-plugin-media-capture)
 
 이 플러그인 디바이스의 오디오, 이미지 및 비디오 캡처 기능에 대 한 액세스를 제공합니다.
 
@@ -40,39 +42,41 @@
 
 ## 지원 되는 플랫폼
 
-*   아마존 화재 운영 체제
-*   안 드 로이드
-*   블랙베리 10
-*   iOS
-*   Windows Phone 7과 8
-*   윈도우 8
+  * 아마존 화재 운영 체제
+  * 안 드 로이드
+  * 블랙베리 10
+  * 브라우저
+  * iOS
+  * Windows Phone 7과 8
+  * 윈도우 8
+  * 윈도우
 
 ## 개체
 
-*   캡처
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
-*   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+  * Capture
+  * CaptureAudioOptions
+  * CaptureImageOptions
+  * CaptureVideoOptions
+  * CaptureCallback
+  * CaptureErrorCB
+  * ConfigurationData
+  * MediaFile
+  * MediaFileData
 
 ## 메서드
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+  * capture.captureAudio
+  * capture.captureImage
+  * capture.captureVideo
+  * MediaFile.getFormatData
 
 ## 속성
 
-*   **supportedAudioModes**: 오디오 녹음 장치에 의해 지원 되는 형식. (ConfigurationData[])
+  * **supportedAudioModes**: 오디오 녹음 장치에 의해 지원 되는 형식. (ConfigurationData[])
 
-*   **supportedImageModes**: 기록 이미지 크기 및 장치에서 지원 되는 형식. (ConfigurationData[])
+  * **supportedImageModes**: 기록 이미지 크기 및 장치에서 지원 되는 형식. (ConfigurationData[])
 
-*   **supportedVideoModes**: 녹음 비디오 해상도 및 장치에 의해 지원 되는 형식. (ConfigurationData[])
+  * **supportedVideoModes**: 녹음 비디오 해상도 및 장치에 의해 지원 되는 형식. (ConfigurationData[])
 
 ## capture.captureAudio
 
@@ -93,12 +97,13 @@
 
 ### 지원 되는 플랫폼
 
-*   아마존 화재 운영 체제
-*   안 드 로이드
-*   블랙베리 10
-*   iOS
-*   Windows Phone 7과 8
-*   윈도우 8
+  * 아마존 화재 운영 체제
+  * 안 드 로이드
+  * 블랙베리 10
+  * iOS
+  * Windows Phone 7과 8
+  * 윈도우 8
+  * 윈도우
 
 ### 예를 들어
 
@@ -122,11 +127,11 @@
 
 ### iOS 단점
 
-*   iOS 없으므로 기본 오디오 녹음 응용 프로그램을 간단한 사용자 인터페이스를 제공 합니다.
+  * iOS 없으므로 기본 오디오 녹음 응용 프로그램을 간단한 사용자 인터페이스를 제공 합니다.
 
 ### Windows Phone 7, 8 특수
 
-*   Windows Phone 7 없으므로 기본 오디오 녹음 응용 프로그램을 간단한 사용자 인터페이스를 제공 합니다.
+  * Windows Phone 7 없으므로 기본 오디오 녹음 응용 프로그램을 간단한 사용자 인터페이스를 제공 합니다.
 
 ## CaptureAudioOptions
 
@@ -134,9 +139,9 @@
 
 ### 속성
 
-*   **제한**: 최대 오디오 클립 장치 사용자는 단일 캡처 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+  * **제한**: 최대 오디오 클립 장치 사용자는 단일 캡처 작업에 기록할 수 있습니다. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
-*   **기간**: 오디오 사운드 클립의 최대 기간 초.
+  * **기간**: 오디오 사운드 클립의 최대 기간 초.
 
 ### 예를 들어
 
@@ -148,20 +153,20 @@
 
 ### 아마존 화재 OS 단점
 
-*   `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+  * `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ### 안 드 로이드 단점
 
-*   `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+  * `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ### 블랙베리 10 단점
 
-*   `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
-*   `limit`매개 변수는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.
+  * `duration`매개 변수는 지원 되지 않습니다. 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+  * `limit`매개 변수는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.
 
 ### iOS 단점
 
-*   `limit`매개 변수는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.
+  * `limit`매개 변수는 지원 되지 않습니다, 그래서 하나의 기록 각 호출에 대해 만들 수 있습니다.
 
 ## capture.captureImage
 
@@ -182,16 +187,24 @@
 
 ### 지원 되는 플랫폼
 
-*   아마존 화재 운영 체제
-*   안 드 로이드
-*   블랙베리 10
-*   iOS
-*   Windows Phone 7과 8
-*   윈도우 8
+  * 아마존 화재 운영 체제
+  * 안 드 로이드
+  * 블랙베리 10
+  * 브라우저
+  * iOS
+  * Windows Phone 7과 8
+  * 윈도우 8
+  * 윈도우
 
 ### Windows Phone 7 단점
 
 당신의 장치 Zune 통해 연결 하는 동안 네이티브 카메라 응용 프로그램을 호출 하면 작동 하지 않는다, 및 오류 콜백 실행.
+
+### 브라우저 만지면
+
+크롬, 파이어 폭스와 오페라에서 작동 하는 단지 (이후 IE와 사파리 navigator.getUserMedia API를 지원 하지 않습니다)
+
+사용 하 여 이미지를 표시 크롬/오페라에서 사용할 수 있는 파일의 URL만 캡처됩니다. 파이어 폭스 IndexedDB 저장 캡처된 이미지 저장 (파일 플러그인 설명서 참조),이 때문에 캡처한 이미지를 표시 하는 유일한 방법은 쇼는 DataURL를 사용 하 여 그것을 읽을 것입니다.
 
 ### 예를 들어
 
@@ -219,7 +232,7 @@
 
 ### 속성
 
-*   **제한**: 사용자는 단일 캡처 작업에서 캡처할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+  * **제한**: 사용자는 단일 캡처 작업에서 캡처할 수 있는 이미지의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
 ### 예를 들어
 
@@ -231,7 +244,7 @@
 
 ### iOS 단점
 
-*   **제한** 매개 변수는 지원 되지 않습니다, 그리고 하나의 이미지 호출 당 촬영.
+  * **제한** 매개 변수는 지원 되지 않습니다, 그리고 하나의 이미지 호출 당 촬영.
 
 ## capture.captureVideo
 
@@ -252,12 +265,13 @@
 
 ### 지원 되는 플랫폼
 
-*   아마존 화재 운영 체제
-*   안 드 로이드
-*   블랙베리 10
-*   iOS
-*   Windows Phone 7과 8
-*   윈도우 8
+  * 아마존 화재 운영 체제
+  * 안 드 로이드
+  * 블랙베리 10
+  * iOS
+  * Windows Phone 7과 8
+  * 윈도우 8
+  * 윈도우
 
 ### 예를 들어
 
@@ -281,7 +295,7 @@
 
 ### 블랙베리 10 단점
 
-*   블랙베리 10 코르도바는 **비디오 레코더** 응용 프로그램을 실행, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
+  * 블랙베리 10 코르도바는 **비디오 레코더** 응용 프로그램을 실행, RIM, 제공한 비디오 녹화를 잡으려고 시도 합니다. 응용 프로그램 수신는 `CaptureError.CAPTURE_NOT_SUPPORTED` 오류 코드 응용 프로그램을 장치에 설치 되어 있지 않으면.
 
 ## CaptureVideoOptions
 
@@ -289,9 +303,9 @@
 
 ### 속성
 
-*   **제한**: 디바이스의 사용자는 단일 캡처 작업에서 캡처할 수 있는 비디오 클립의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
+  * **제한**: 디바이스의 사용자는 단일 캡처 작업에서 캡처할 수 있는 비디오 클립의 최대 수. 값 1 (기본값: 1) 보다 크거나 같아야 합니다.
 
-*   **기간**: 비디오 클립의 최대 기간 초.
+  * **기간**: 비디오 클립의 최대 기간 초.
 
 ### 예를 들어
 
@@ -303,11 +317,11 @@
 
 ### 블랙베리 10 단점
 
-*   **기간** 매개 변수가 지원 되지 않으므로 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
+  * **기간** 매개 변수가 지원 되지 않으므로 녹음 길이 프로그래밍 방식으로 제한 될 수 없습니다.
 
 ### iOS 단점
 
-*   **제한** 매개 변수는 지원 되지 않습니다. 비디오 호출 당 기록 됩니다.
+  * **제한** 매개 변수는 지원 되지 않습니다. 비디오 호출 당 기록 됩니다.
 
 ## CaptureCB
 
@@ -340,19 +354,19 @@
 
 ### 속성
 
-*   **코드**: 미리 정의 된 오류 코드 중 하나가 아래에 나열 된.
+  * **코드**: 미리 정의 된 오류 코드 중 하나가 아래에 나열 된.
 
 ### 상수
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: 카메라 또는 마이크 캡처 이미지 또는 소리 하지 못했습니다.
+  * `CaptureError.CAPTURE_INTERNAL_ERR`: 카메라 또는 마이크 캡처 이미지 또는 소리 하지 못했습니다.
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`: 카메라 또는 오디오 캡처 응용 프로그램은 현재 또 다른 캡처 요청을 제공 하고있다.
+  * `CaptureError.CAPTURE_APPLICATION_BUSY`: 카메라 또는 오디오 캡처 응용 프로그램은 현재 또 다른 캡처 요청을 제공 하고있다.
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`: API 잘못 된 사용 (예를 들어, 값 `limit` 보다 작은 하나입니다).
+  * `CaptureError.CAPTURE_INVALID_ARGUMENT`: API 잘못 된 사용 (예를 들어, 값 `limit` 보다 작은 하나입니다).
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: 사용자는 아무것도 캡처하기 전에 카메라 또는 오디오 캡처 응용 프로그램을 종료 합니다.
+  * `CaptureError.CAPTURE_NO_MEDIA_FILES`: 사용자는 아무것도 캡처하기 전에 카메라 또는 오디오 캡처 응용 프로그램을 종료 합니다.
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`: 요청 된 캡처 작업이 지원 되지 않습니다.
+  * `CaptureError.CAPTURE_NOT_SUPPORTED`: 요청 된 캡처 작업이 지원 되지 않습니다.
 
 ## CaptureErrorCB
 
@@ -383,23 +397,21 @@
 
 장치에서 지 원하는 미디어 캡처 모드를 설명 합니다. 구성 데이터는 MIME 유형 및 비디오 또는 이미지 캡처 캡처 크기 포함 됩니다.
 
-MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
+MIME 형식 [RFC2046](http://www.ietf.org/rfc/rfc2046.txt)을 준수 해야 합니다. 예:
 
- [1]: http://www.ietf.org/rfc/rfc2046.txt
-
-*   `video/3gpp`
-*   `video/quicktime`
-*   `image/jpeg`
-*   `audio/amr`
-*   `audio/wav`
+  * `video/3gpp`
+  * `video/quicktime`
+  * `image/jpeg`
+  * `audio/amr`
+  * `audio/wav`
 
 ### 속성
 
-*   **유형**: 미디어 형식을 나타내는 ASCII로 인코딩 소문자 문자열. (DOMString)
+  * **유형**: 미디어 형식을 나타내는 ASCII로 인코딩 소문자 문자열. (DOMString)
 
-*   **높이**: 이미지 또는 비디오 픽셀에서의 높이 있습니다. 사운드 클립에 대 한 0입니다. (수)
+  * **높이**: 이미지 또는 비디오 픽셀에서의 높이 있습니다. 사운드 클립에 대 한 0입니다. (수)
 
-*   **폭**: 이미지 또는 비디오 픽셀에서의 너비. 사운드 클립에 대 한 0입니다. (수)
+  * **폭**: 이미지 또는 비디오 픽셀에서의 너비. 사운드 클립에 대 한 0입니다. (수)
 
 ### 예를 들어
 
@@ -435,12 +447,13 @@ MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
 
 ### 지원 되는 플랫폼
 
-*   아마존 화재 운영 체제
-*   안 드 로이드
-*   블랙베리 10
-*   iOS
-*   Windows Phone 7과 8
-*   윈도우 8
+  * 아마존 화재 운영 체제
+  * 안 드 로이드
+  * 블랙베리 10
+  * iOS
+  * Windows Phone 7과 8
+  * 윈도우 8
+  * 윈도우
 
 ### 아마존 화재 OS 단점
 
@@ -464,19 +477,19 @@ MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
 
 ### 속성
 
-*   **이름**: 경로 정보 없이 파일 이름. (DOMString)
+  * **이름**: 경로 정보 없이 파일 이름. (DOMString)
 
-*   **fullPath**: 이름을 포함 한 파일의 전체 경로. (DOMString)
+  * **fullPath**: 이름을 포함 한 파일의 전체 경로. (DOMString)
 
-*   **유형**: 파일의 mime 형식 (DOMString)
+  * **유형**: 파일의 mime 형식 (DOMString)
 
-*   **lastModifiedDate**: 날짜 및 시간 파일을 마지막으로 수정한. (날짜)
+  * **lastModifiedDate**: 날짜 및 시간 파일을 마지막으로 수정한. (날짜)
 
-*   **크기**: 바이트에서 파일의 크기. (수)
+  * **크기**: 바이트에서 파일의 크기. (수)
 
 ### 메서드
 
-*   **MediaFile.getFormatData**: 미디어 파일의 형식 정보를 검색 합니다.
+  * **MediaFile.getFormatData**: 미디어 파일의 형식 정보를 검색 합니다.
 
 ## MediaFileData
 
@@ -484,68 +497,68 @@ MIME 형식 [RFC2046][1]을 준수 해야 합니다. 예:
 
 ### 속성
 
-*   **코덱**: 실제 형식의 오디오 및 비디오 콘텐츠. (DOMString)
+  * **코덱**: 실제 형식의 오디오 및 비디오 콘텐츠. (DOMString)
 
-*   **비트 레이트**: 콘텐츠의 평균 비트 전송률. 값은 이미지에 대 한 0. (수)
+  * **비트 레이트**: 콘텐츠의 평균 비트 전송률. 값은 이미지에 대 한 0. (수)
 
-*   **높이**: 이미지 또는 비디오 픽셀에서의 높이 있습니다. 오디오 클립에 대 한 0입니다. (수)
+  * **높이**: 이미지 또는 비디오 픽셀에서의 높이 있습니다. 오디오 클립에 대 한 0입니다. (수)
 
-*   **폭**: 이미지 또는 비디오 픽셀에서의 너비. 오디오 클립에 대 한 0입니다. (수)
+  * **폭**: 이미지 또는 비디오 픽셀에서의 너비. 오디오 클립에 대 한 0입니다. (수)
 
-*   **기간**: 초에 비디오 또는 사운드 클립의 길이. 값은 이미지에 대 한 0. (수)
+  * **기간**: 초에 비디오 또는 사운드 클립의 길이. 값은 이미지에 대 한 0. (수)
 
 ### 블랙베리 10 단점
 
 `MediaFileData` 개체 `MediaFile.getFormatData` 기능에 의해 다음 기본 값을 반환 없음 API 미디어 파일에 대 한 형식 정보를 제공 합니다.
 
-*   **코덱**: 안 지원, 및 반환`null`.
+  * **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: 안 지원, 및 0을 반환 합니다.
+  * **비트 레이트**: 안 지원, 및 0을 반환 합니다.
 
-*   **높이**: 안 지원, 및 0을 반환 합니다.
+  * **높이**: 안 지원, 및 0을 반환 합니다.
 
-*   **폭**: 안 지원, 및 0을 반환 합니다.
+  * **폭**: 안 지원, 및 0을 반환 합니다.
 
-*   **기간**: 안 지원, 및 0을 반환 합니다.
+  * **기간**: 안 지원, 및 0을 반환 합니다.
 
 ### 아마존 화재 OS 단점
 
 지원 되는 `MediaFileData` 속성:
 
-*   **코덱**: 안 지원, 및 반환`null`.
+  * **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: 안 지원, 및 0을 반환 합니다.
+  * **비트 레이트**: 안 지원, 및 0을 반환 합니다.
 
-*   **높이**: 지원: 이미지 및 비디오 파일에만.
+  * **높이**: 지원: 이미지 및 비디오 파일에만.
 
-*   **폭**: 지원: 이미지 및 비디오 파일에만.
+  * **폭**: 지원: 이미지 및 비디오 파일에만.
 
-*   **기간**: 지원: 오디오 및 비디오 파일을
+  * **기간**: 지원: 오디오 및 비디오 파일을
 
 ### 안 드 로이드 단점
 
 지원 되는 `MediaFileData` 속성:
 
-*   **코덱**: 안 지원, 및 반환`null`.
+  * **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: 안 지원, 및 0을 반환 합니다.
+  * **비트 레이트**: 안 지원, 및 0을 반환 합니다.
 
-*   **높이**: 지원: 이미지 및 비디오 파일에만.
+  * **높이**: 지원: 이미지 및 비디오 파일에만.
 
-*   **폭**: 지원: 이미지 및 비디오 파일에만.
+  * **폭**: 지원: 이미지 및 비디오 파일에만.
 
-*   **기간**: 지원: 오디오 및 비디오 파일을.
+  * **기간**: 지원: 오디오 및 비디오 파일을.
 
 ### iOS 단점
 
 지원 되는 `MediaFileData` 속성:
 
-*   **코덱**: 안 지원, 및 반환`null`.
+  * **코덱**: 안 지원, 및 반환`null`.
 
-*   **비트 레이트**: iOS4 장치 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
+  * **비트 레이트**: iOS4 장치 오디오 전용에 대 한 지원. 이미지 및 비디오에 대 한 반환 0입니다.
 
-*   **높이**: 지원: 이미지 및 비디오 파일에만.
+  * **높이**: 지원: 이미지 및 비디오 파일에만.
 
-*   **폭**: 지원: 이미지 및 비디오 파일에만.
+  * **폭**: 지원: 이미지 및 비디오 파일에만.
 
-*   **기간**: 지원: 오디오 및 비디오 파일을.
+  * **기간**: 지원: 오디오 및 비디오 파일을.

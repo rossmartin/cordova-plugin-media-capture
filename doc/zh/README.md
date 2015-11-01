@@ -1,23 +1,25 @@
-<!---
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
 -->
 
 # cordova-plugin-media-capture
+
+[![Build Status](https://travis-ci.org/apache/cordova-plugin-media-capture.svg)](https://travis-ci.org/apache/cordova-plugin-media-capture)
 
 這個外掛程式提供了對設備的音訊、 圖像和視頻捕獲功能的訪問。
 
@@ -40,39 +42,41 @@
 
 ## 支援的平臺
 
-*   亞馬遜火 OS
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Windows Phone 7 和 8
-*   Windows 8
+  * 亞馬遜火 OS
+  * Android 系統
+  * 黑莓 10
+  * 瀏覽器
+  * iOS
+  * Windows Phone 7 和 8
+  * Windows 8
+  * Windows
 
 ## 物件
 
-*   捕獲
-*   CaptureAudioOptions
-*   CaptureImageOptions
-*   CaptureVideoOptions
-*   CaptureCallback
-*   CaptureErrorCB
-*   ConfigurationData
-*   MediaFile
-*   MediaFileData
+  * 捕獲
+  * CaptureAudioOptions
+  * CaptureImageOptions
+  * CaptureVideoOptions
+  * CaptureCallback
+  * CaptureErrorCB
+  * ConfigurationData
+  * MediaFile
+  * MediaFileData
 
 ## 方法
 
-*   capture.captureAudio
-*   capture.captureImage
-*   capture.captureVideo
-*   MediaFile.getFormatData
+  * capture.captureAudio
+  * capture.captureImage
+  * capture.captureVideo
+  * MediaFile.getFormatData
 
 ## 屬性
 
-*   **supportedAudioModes**： 音訊錄音設備所支援的格式。(ConfigurationData[])
+  * **supportedAudioModes**： 音訊錄音設備所支援的格式。(ConfigurationData[])
 
-*   **supportedImageModes**： 錄製圖像大小和格式的設備支援。(ConfigurationData[])
+  * **supportedImageModes**： 錄製圖像大小和格式的設備支援。(ConfigurationData[])
 
-*   **supportedVideoModes**： 錄製的視頻解析度和設備支援的格式。(ConfigurationData[])
+  * **supportedVideoModes**： 錄製的視頻解析度和設備支援的格式。(ConfigurationData[])
 
 ## capture.captureAudio
 
@@ -93,12 +97,13 @@
 
 ### 支援的平臺
 
-*   亞馬遜火 OS
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Windows Phone 7 和 8
-*   Windows 8
+  * 亞馬遜火 OS
+  * Android 系統
+  * 黑莓 10
+  * iOS
+  * Windows Phone 7 和 8
+  * Windows 8
+  * Windows
 
 ### 示例
 
@@ -122,11 +127,11 @@
 
 ### iOS 的怪癖
 
-*   iOS 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。
+  * iOS 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。
 
 ### Windows Phone 7 和 8 怪癖
 
-*   Windows Phone 7 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。
+  * Windows Phone 7 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。
 
 ## CaptureAudioOptions
 
@@ -134,9 +139,9 @@
 
 ### 屬性
 
-*   **limit**： 音訊剪輯設備使用者可以在單個捕獲操作中記錄的最大數目。值必須是大於或等於 1 （預設為 1）。
+  * **limit**： 音訊剪輯設備使用者可以在單個捕獲操作中記錄的最大數目。值必須是大於或等於 1 （預設為 1）。
 
-*   **duration**： 音訊的音效片段，以秒為單位的最長期限。
+  * **duration**： 音訊的音效片段，以秒為單位的最長期限。
 
 ### 示例
 
@@ -148,20 +153,20 @@
 
 ### 亞馬遜火 OS 怪癖
 
-*   `duration`參數不受支援。記錄長度不能僅限於以程式設計方式。
+  * `duration`參數不受支援。記錄長度不能僅限於以程式設計方式。
 
 ### Android 的怪癖
 
-*   `duration`參數不受支援。記錄長度不能僅限於以程式設計方式。
+  * `duration`參數不受支援。記錄長度不能局限以程式設計方式。
 
 ### 黑莓 10 怪癖
 
-*   `duration`參數不受支援。記錄長度不能局限以程式設計方式。
-*   `limit`參數不受支援，所以只有一個記錄可以創建的每個調用。
+  * `duration`參數不受支援。記錄長度不能局限以程式設計方式。
+  * `limit`參數不受支援，所以只有一個記錄可以創建的每個調用。
 
 ### iOS 的怪癖
 
-*   `limit`參數不受支援，所以只有一個記錄可以創建的每個調用。
+  * `limit`參數不受支援，所以只有一個記錄可以創建的每個調用。
 
 ## capture.captureImage
 
@@ -182,16 +187,24 @@
 
 ### 支援的平臺
 
-*   亞馬遜火 OS
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Windows Phone 7 和 8
-*   Windows 8
+  * 亞馬遜火 OS
+  * Android 系統
+  * 黑莓 10
+  * 瀏覽器
+  * iOS
+  * Windows Phone 7 和 8
+  * Windows 8
+  * Windows
 
 ### Windows Phone 7 的怪癖
 
 調用本機攝像頭應用程式，而通過 Zune 連接您的設備不能工作，和錯誤回檔執行。
+
+### 瀏覽器的怪癖
+
+在 Chrome、 火狐瀏覽器和歌劇作品只 (因為 IE 和 Safari 不支援 navigator.getUserMedia API)
+
+顯示使用的影像檔的 URL 可用鉻雜劇只捕獲。 火狐瀏覽器將捕捉到的圖像存儲在 IndexedDB 存儲 (請參閱檔外掛程式文檔)，因為這顯示捕獲的映射的唯一方法是閱讀它並使用其 DataURL 的顯示。
 
 ### 示例
 
@@ -219,7 +232,7 @@
 
 ### 屬性
 
-*   **limit**： 使用者可以在單個捕獲操作中捕獲的圖像的最大數目。值必須是大於或等於 1 （預設為 1）。
+  * **limit**： 使用者可以在單個捕獲操作中捕獲的圖像的最大數目。值必須是大於或等於 1 （預設為 1）。
 
 ### 示例
 
@@ -231,7 +244,7 @@
 
 ### iOS 的怪癖
 
-*   **limit**參數不受支援，並只有一個圖像採取每次調用的。
+  * **limit**參數不受支援，並只有一個圖像採取每次調用的。
 
 ## capture.captureVideo
 
@@ -252,12 +265,13 @@
 
 ### 支援的平臺
 
-*   亞馬遜火 OS
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Windows Phone 7 和 8
-*   Windows 8
+  * 亞馬遜火 OS
+  * Android 系統
+  * 黑莓 10
+  * iOS
+  * Windows Phone 7 和 8
+  * Windows 8
+  * Windows
 
 ### 示例
 
@@ -281,7 +295,7 @@
 
 ### 黑莓 10 怪癖
 
-*   科爾多瓦的黑莓 10 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
+  * 科爾多瓦的黑莓 10 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
 
 ## CaptureVideoOptions
 
@@ -289,9 +303,9 @@
 
 ### 屬性
 
-*   **limit**： 該設備的使用者可以在單個捕獲操作中捕獲的視訊短片的最大數目。值必須是大於或等於 1 （預設為 1）。
+  * **limit**： 該設備的使用者可以在單個捕獲操作中捕獲的視訊短片的最大數目。值必須是大於或等於 1 （預設為 1）。
 
-*   **duration**： 視訊短片，以秒為單位的最長期限。
+  * **duration**： 視訊短片，以秒為單位的最長期限。
 
 ### 示例
 
@@ -303,11 +317,11 @@
 
 ### 黑莓 10 怪癖
 
-*   不支援的**duration**參數，所以錄製的長度不能以程式設計方式加以限制。
+  * 不支援的**duration**參數，所以錄製的長度不能以程式設計方式加以限制。
 
 ### iOS 的怪癖
 
-*   **limit**參數不受支援。只有一個視頻記錄每次調用的。
+  * **limit**參數不受支援。只有一個視頻記錄每次調用的。
 
 ## CaptureCB
 
@@ -340,19 +354,19 @@
 
 ### 屬性
 
-*   **code**： 下面列出的預定義的錯誤代碼之一。
+  * **code**： 下面列出的預定義的錯誤代碼之一。
 
 ### 常量
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`： 攝像機或麥克風無法捕獲的圖像或聲音。
+  * `CaptureError.CAPTURE_INTERNAL_ERR`： 攝像機或麥克風無法捕獲的圖像或聲音。
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 相機或音訊捕獲應用程式正在服另一個捕獲請求。
+  * `CaptureError.CAPTURE_APPLICATION_BUSY`： 相機或音訊捕獲應用程式正在服另一個捕獲請求。
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`： API 的使用無效 （例如，價值 `limit` 小於 1)。
+  * `CaptureError.CAPTURE_INVALID_ARGUMENT`： API 的使用無效 （例如，價值 `limit` 小於 1)。
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在使用者退出之前捕獲任何相機或音訊捕獲應用程式。
+  * `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在使用者退出之前捕獲任何相機或音訊捕獲應用程式。
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 請求的捕獲操作不受支援。
+  * `CaptureError.CAPTURE_NOT_SUPPORTED`： 請求的捕獲操作不受支援。
 
 ## CaptureErrorCB
 
@@ -383,23 +397,21 @@
 
 描述了設備所支援的媒體捕捉模式。配置資料包含的 MIME 類型和視頻或圖像捕獲捕獲尺寸。
 
-MIME 類型應堅持 [RFC2046][1]。示例：
+MIME 類型應堅持 [RFC2046](http://www.ietf.org/rfc/rfc2046.txt)。示例：
 
- [1]: http://www.ietf.org/rfc/rfc2046.txt
-
-*   `video/3gpp`
-*   `video/quicktime`
-*   `image/jpeg`
-*   `audio/amr`
-*   `audio/wav`
+  * `video/3gpp`
+  * `video/quicktime`
+  * `image/jpeg`
+  * `audio/amr`
+  * `audio/wav`
 
 ### 屬性
 
-*   **type**： ASCII 編碼的小寫字串表示的媒體類型。() DOMString
+  * **type**： ASCII 編碼的小寫字串表示的媒體類型。() DOMString
 
-*   **height**： 圖像或視頻以圖元為單位的高度。值為零的音效片段。（人數）
+  * **height**： 圖像或視頻以圖元為單位的高度。值為零的音效片段。（人數）
 
-*   **width**： 圖像或視頻以圖元為單位的寬度。值為零的音效片段。（人數）
+  * **width**： 圖像或視頻以圖元為單位的寬度。值為零的音效片段。（人數）
 
 ### 示例
 
@@ -435,12 +447,13 @@ MIME 類型應堅持 [RFC2046][1]。示例：
 
 ### 支援的平臺
 
-*   亞馬遜火 OS
-*   Android 系統
-*   黑莓 10
-*   iOS
-*   Windows Phone 7 和 8
-*   Windows 8
+  * 亞馬遜火 OS
+  * Android 系統
+  * 黑莓 10
+  * iOS
+  * Windows Phone 7 和 8
+  * Windows 8
+  * Windows
 
 ### 亞馬遜火 OS 怪癖
 
@@ -464,19 +477,19 @@ MIME 類型應堅持 [RFC2046][1]。示例：
 
 ### 屬性
 
-*   **name**： 檔的名稱，不包含路徑資訊。() DOMString
+  * **name**： 檔的名稱，不包含路徑資訊。() DOMString
 
-*   **fullPath**： 檔，包括名稱的完整路徑。() DOMString
+  * **fullPath**： 檔，包括名稱的完整路徑。() DOMString
 
-*   **type**： 檔的 mime 類型 (DOMString)
+  * **type**： 檔的 mime 類型 (DOMString)
 
-*   **lastModifiedDate**： 日期和檔的上次修改時間。（日期）
+  * **lastModifiedDate**： 日期和檔的上次修改時間。（日期）
 
-*   **size**： 檔的大小，以位元組為單位。（人數）
+  * **size**： 檔的大小，以位元組為單位。（人數）
 
 ### 方法
 
-*   **MediaFile.getFormatData**: 檢索該媒體檔案的格式資訊。
+  * **MediaFile.getFormatData**: 檢索該媒體檔案的格式資訊。
 
 ## MediaFileData
 
@@ -484,68 +497,68 @@ MIME 類型應堅持 [RFC2046][1]。示例：
 
 ### 屬性
 
-*   **codecs**： 實際的音訊和視頻內容的格式。() DOMString
+  * **codecs**： 實際的音訊和視頻內容的格式。() DOMString
 
-*   **bitrate**： 內容的平均位元速率。值為零的圖像。（人數）
+  * **bitrate**： 內容的平均位元速率。值為零的圖像。（人數）
 
-*   **height**： 圖像或視頻以圖元為單位的高度。值為零的音訊剪輯。（人數）
+  * **height**： 圖像或視頻以圖元為單位的高度。值為零的音訊剪輯。（人數）
 
-*   **width**： 圖像或視頻以圖元為單位的寬度。值為零的音訊剪輯。（人數）
+  * **width**： 圖像或視頻以圖元為單位的寬度。值為零的音訊剪輯。（人數）
 
-*   **duration**： 以秒為單位的視頻或音效片段的長度。值為零的圖像。（人數）
+  * **duration**： 以秒為單位的視頻或音效片段的長度。值為零的圖像。（人數）
 
 ### 黑莓 10 怪癖
 
 沒有 API 提供了媒體檔案的格式資訊，所以下面的預設值由 `MediaFile.getFormatData` 功能返回的 `MediaFileData` 物件：
 
-*   **codecs**： 不受支援，並且返回`null`.
+  * **codecs**： 不受支援，並且返回`null`.
 
-*   **bitrate**: 不受支援，並且返回零。
+  * **bitrate**: 不受支援，並且返回零。
 
-*   **height**: 不受支援，並且返回零。
+  * **height**: 不受支援，並且返回零。
 
-*   **width**: 不受支援，並且返回零。
+  * **width**: 不受支援，並且返回零。
 
-*   **duration**： 不受支援，並且返回零。
+  * **duration**： 不受支援，並且返回零。
 
 ### 亞馬遜火 OS 怪癖
 
 支援以下 `MediaFileData` 屬性：
 
-*   **codecs**： 不受支援，並且返回`null`.
+  * **codecs**： 不受支援，並且返回`null`.
 
-*   **bitrate**: 不受支援，並且返回零。
+  * **bitrate**: 不受支援，並且返回零。
 
-*   **height**： 支援： 僅圖像和視頻檔。
+  * **height**： 支援： 僅圖像和視頻檔。
 
-*   **width**： 支援： 僅圖像和視頻檔。
+  * **width**： 支援： 僅圖像和視頻檔。
 
-*   **duration**： 支援： 僅音訊和視頻檔
+  * **duration**： 支援： 僅音訊和視頻檔
 
 ### Android 的怪癖
 
 支援以下 `MediaFileData` 屬性：
 
-*   **codecs**： 不受支援，並且返回`null`.
+  * **codecs**： 不受支援，並且返回`null`.
 
-*   **bitrate**: 不受支援，並且返回零。
+  * **bitrate**: 不受支援，並且返回零。
 
-*   **height**： 支援： 僅圖像和視頻檔。
+  * **height**： 支援： 僅圖像和視頻檔。
 
-*   **width**： 支援： 僅圖像和視頻檔。
+  * **width**： 支援： 僅圖像和視頻檔。
 
-*   **duration**： 支援： 僅音訊和視頻檔。
+  * **duration**： 支援： 僅音訊和視頻檔。
 
 ### iOS 的怪癖
 
 支援以下 `MediaFileData` 屬性：
 
-*   **codecs**： 不受支援，並且返回`null`.
+  * **codecs**： 不受支援，並且返回`null`.
 
-*   **bitrate**： 僅音訊 iOS4 設備上受支援。對於圖像和視頻，返回零。
+  * **bitrate**： 僅音訊 iOS4 設備上受支援。對於圖像和視頻，返回零。
 
-*   **height**： 支援： 僅圖像和視頻檔。
+  * **height**： 支援： 僅圖像和視頻檔。
 
-*   **width**： 支援： 僅圖像和視頻檔。
+  * **width**： 支援： 僅圖像和視頻檔。
 
-*   **duration**： 支援： 僅音訊和視頻檔。
+  * **duration**： 支援： 僅音訊和視頻檔。
